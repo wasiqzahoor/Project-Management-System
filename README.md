@@ -63,12 +63,7 @@ dashboard/
    ```
 
 3. Update the `.env` file with your MongoDB credentials:
-   ```env
-   PORT=5000
-   MONGODB_URI=mongodb+srv://tasirzahoor9_db_user:YOUR_PASSWORD@cluster0.ptzofsp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-   JWT_SECRET=your_super_secret_jwt_key_here_make_it_long_and_complex
-   NODE_ENV=development
-   ```
+  
 
 4. Start the server:
    ```bash
