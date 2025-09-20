@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --toast-bg: #ffffff;
+  --toast-color: #374151;
+}
+
+.dark {
+  --toast-bg: #374151;
+  --toast-color: #f9fafb;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  transition: all 0.3s;
+  background-color: rgba(106, 115, 125, 0.2);
+  &:hover {
+    background-color: rgba(106, 115, 125, 0.27);
+  }
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Custom focus styles */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* React-Select Dark Mode Styles */
+.dark .react-select__control {
+  background-color: #374151; /* gray-700 */
+  border-color: #4b5563; /* gray-600 */
+}
+
+.dark .react-select__control--is-focused {
+  border-color: #3b82f6 !important; /* blue-500 */
+  box-shadow: 0 0 0 1px #3b82f6 !important;
+}
+
+.dark .react-select__input-container,
+.dark .react-select__single-value,
+.dark .react-select__placeholder {
+  color: #d1d5db; /* gray-300 */
+}
+
+.dark .react-select__menu {
+  background-color: #1f2937; /* gray-800 */
+}
+
+.dark .react-select__option {
+  background-color: #1f2937; /* gray-800 */
+}
+
+.dark .react-select__option--is-focused {
+  background-color: #374151; /* gray-700 */
+}
+
+.dark .react-select__option--is-selected {
+  background-color: #3b82f6; /* blue-500 */
+}
+
+.dark .react-select__multi-value {
+  background-color: #4b5563; /* gray-600 */
+  color: white;
+}
+
+.dark .react-select__multi-value__label {
+  color: white;
+}
